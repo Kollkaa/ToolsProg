@@ -5,16 +5,16 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MyFileFilter implements FilenameFilter {
+class MyFileNameFilter implements FilenameFilter{
+
     private String ext;
 
-    public MyFileFilter(String ext) {
-        this.ext = ext;
+    public MyFileNameFilter(String ext){
+        this.ext = ext.toLowerCase();
     }
-
+    @Override
     public boolean accept(File dir, String name) {
-        int p = name.indexOf(ext);
-        return ((p >= 0) && (p + ext.length() == name.length()));
+        return true;
     }
 }
 

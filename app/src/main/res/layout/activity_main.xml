@@ -15,24 +15,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="10dp">
-        <Button
-            android:id="@+id/btnStartHttp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onClickStart"
-            android:text="@string/http"
-            android:textSize="12sp">
-        </Button>
-        <Button
-            android:id="@+id/btnStartStream"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onClickStart"
-            android:text="@string/stream"
-            android:textSize="12sp">
-        </Button>
+
         <Button
             android:id="@+id/btnStartSD"
             android:layout_width="0dp"
@@ -40,26 +23,15 @@
             android:layout_weight="1"
             android:onClick="onClickStart"
             android:text="@string/sd"
-            android:textSize="12sp">
-        </Button>
+            android:textAlignment="center"
+            android:textSize="24sp"></Button>
+
         <Button
-            android:id="@+id/btnStartUri"
-            android:layout_width="0dp"
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:onClick="onClickStart"
-            android:text="@string/uri"
-            android:textSize="12sp">
-        </Button>
-        <Button
-            android:id="@+id/btnStartRaw"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onClickStart"
-            android:text="@string/raw"
-            android:textSize="12sp">
-        </Button>
+            android:text="Пошук" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -69,6 +41,7 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/linearLayout1"
         android:layout_marginTop="30dp">
+
         <Button
             android:id="@+id/btnPause"
             android:layout_width="0dp"
@@ -76,8 +49,9 @@
             android:layout_weight="1"
             android:onClick="onClick"
             android:text="@string/pause"
-            android:textSize="12sp">
-        </Button>
+            android:textAlignment="center"
+            android:textSize="24sp"></Button>
+
         <Button
             android:id="@+id/btnResume"
             android:layout_width="0dp"
@@ -85,8 +59,9 @@
             android:layout_weight="1"
             android:onClick="onClick"
             android:text="@string/resume"
-            android:textSize="12sp">
-        </Button>
+            android:textAlignment="center"
+            android:textSize="24sp"></Button>
+
         <Button
             android:id="@+id/btnStop"
             android:layout_width="0dp"
@@ -94,8 +69,8 @@
             android:layout_weight="1"
             android:onClick="onClick"
             android:text="@string/stop"
-            android:textSize="12sp">
-        </Button>
+            android:textAlignment="center"
+            android:textSize="24sp"></Button>
         <CheckBox
             android:id="@+id/chbLoop"
             android:layout_width="wrap_content"
@@ -119,8 +94,9 @@
             android:layout_weight="1"
             android:onClick="onClick"
             android:text="@string/backward"
-            android:textSize="12sp">
-        </Button>
+            android:textAlignment="center"
+            android:textSize="24sp"></Button>
+
         <Button
             android:id="@+id/btnForward"
             android:layout_width="0dp"
@@ -128,8 +104,8 @@
             android:layout_weight="1"
             android:onClick="onClick"
             android:text="@string/forward"
-            android:textSize="12sp">
-        </Button>
+            android:textSize="24sp"></Button>
+
         <Button
             android:id="@+id/btnInfo"
             android:layout_width="0dp"
@@ -137,8 +113,7 @@
             android:layout_weight="1"
             android:onClick="onClick"
             android:text="@string/info"
-            android:textSize="12sp">
-        </Button>
+            android:textSize="24sp"></Button>
 
     </LinearLayout>
 
@@ -160,9 +135,11 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:minHeight="200dp"
+                android:orientation="horizontal">
 
                 <ListView
+                    android:id="@+id/dynamic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </LinearLayout>
